@@ -1,0 +1,35 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import Container from '../composants/container'
+import Beneficiaire from '../layouts/beneficaire'
+import Schema from '../layouts/etapes'
+import Header from '../layouts/header'
+import Mission from '../layouts/mission'
+import Objectifs from '../layouts/objectifs'
+import Principal from '../layouts/principe'
+import VideoPresentation from '../layouts/sectionVideo'
+import Testimony from '../layouts/temoignage'
+import styles from '../styles/Home.module.css'
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Create Next App</title>
+      </Head>
+      <Header />
+      <Mission />
+      <Beneficiaire />
+      <Objectifs />
+      <Schema />
+      <Principal />
+      <VideoPresentation />
+      <Testimony /> 
+      <Container>
+        <footer className={styles.footer}>
+          
+        </footer>
+      </Container>
+    </>
+  )
+}
