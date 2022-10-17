@@ -48,8 +48,7 @@ export default function NavBar(){
                     <div style={{ display : "flex", width : 'auto'}}>
                     <motion.div className="cover" onClick={handleVisibility} layout = {'size'} transition = {{ type : 'spring', stiffness : 700, damping : 70}} ></motion.div>
                     <motion.div className="nav-content"
-                        data-visible = {visible}
-                        
+                        data-visible = {visible} 
                     >
                         <div className="vide">
                             <div className="close_btn close">

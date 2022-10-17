@@ -37,3 +37,10 @@ function ImageItem({image}){
         </div>
     )
 }
+function ImageGallerie({image}){
+    return(
+        <div className="col-6 col-md-3 d-flex mb-4 justify-content-center">
+            <div className="col-12" style={{backgroundImage : `url(${image})`, backgroundPosition : 'center', backgroundSize : 'cover', aspectRatio : 1, backgroundColor : "silver", borderRadius : 12}}></div>   
+        </div>
+    )
+}
