@@ -29,7 +29,6 @@ export default function VideoPresentation (){
 function VideoApercu({open, onClick, close}){
     const ref = useRef()
 
-    // console.log(ref.current.paused)
     return(
         <div id="apercu" style ={{display : open ? 'flex' : 'none' }} onClick = {onClick}>
             <div className="videoApercu">

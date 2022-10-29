@@ -18,10 +18,7 @@ export default function Header(){
         setSecond('logo_anime start')
     }, 2000)
 
-    scrollY.onChange( a => {
-        console.log(scrollY.get())
-    })
-
+    
     return(
         <header className="pb-5">
 

@@ -1358,9 +1358,11 @@ header p {
 }
 
 .testimony {
-    max-width: 550px;
+    max-width: 350px;
     width: 100%;
-
+    background-color: #f3f3f3;
+    padding-bottom: 24px;
+    border-radius: 16px;
 }
 
 #testimony {
@@ -1441,3 +1443,74 @@ img, svg {
     padding: 4rem 0;
     background-color: var(--bg-color-claire);
 }
+
+.viewer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0007;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.viewer .container {
+    height: 100vh;
+}
+
+.viewer .viewerImage {
+    width: 700px;
+    height: 500px;
+    margin-top: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.viewer .viewerImage img {
+    box-shadow: 0 12px 50px 0px #0004;
+}
+
+
+.viewer .viewerImage .leftbtn,
+.viewer .viewerImage .rightbtn {
+    position: absolute;
+    opacity: 0.9;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.viewer .viewerImage .leftbtn {
+    left: -10px;
+}
+
+.viewer .viewerImage .rightbtn {
+    right: -10px;
+}
+
+.viewer .controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+    gap: 7px;
+}
+
+.viewer .controller .thumbail {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.gallerie {
+    cursor: pointer ;
+}
+

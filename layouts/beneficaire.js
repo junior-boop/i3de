@@ -4,7 +4,7 @@ export default function Beneficiaire(){
     return(
         <>  
             <div className="vide" />
-            <div className="container-fluide mt-5" style = {{backgroundColor : '#fafafa'}}>
+            <div className="container-fluide mt-5" style = {{backgroundColor : '#f3f3f3'}}>
                 <div className="h1 w-100 text-center pt-5"> Bénéficiaires </div>
                 <Container cName = {'row pb-5'} style = {{gap : 36, justifyContent : 'center'}}>
                     <BeneficaireItem 

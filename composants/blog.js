@@ -28,6 +28,19 @@ export default function BlogItem() {
             </div>
     )
 }
+export function BlogNew() {
+    return (
+            <div className='col-6 col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100" p-0'>
+                <div className="blogNew">
+                    <div className="imageTop" style={{backgroundImage : `url(/assets/images/image-test.jpg)`}}></div>
+                    <div className="descBlog">
+                        <div>Le titre de l'article que je ne connais pas encore</div>
+                        <div>date de publication</div>
+                    </div>
+                </div>
+            </div>
+    )
+}
 
 
 export function Blog() {
