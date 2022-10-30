@@ -1,8 +1,8 @@
 export default function Bannier({name}){
     return(
-        <div class="container-fluid bg-special">
-            <div class="container">
-                <div class="titre w-100 py-5 color-white">
+        <div className="container-fluid bg-special">
+            <div className="container">
+                <div className="titre w-100 py-5 color-white">
                     {name}
                 </div>
             </div>

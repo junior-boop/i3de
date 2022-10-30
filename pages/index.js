@@ -11,6 +11,11 @@ import VideoPresentation from '../layouts/sectionVideo'
 import Testimony from '../layouts/temoignage'
 import styles from '../styles/Home.module.css'
 
+import InitFireBase from '../firebase'
+
+
+InitFireBase()
+
 export default function Home() {
   return (
     <>
