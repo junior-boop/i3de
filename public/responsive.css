@@ -196,4 +196,41 @@
     .diapo .proxi {
         display: none;
     }
+
+    .nav-overlay[data-visible = 'true'] .cover {
+        width: 20vw;
+    }
+
+    .principeImage {
+        position: relative;
+        bottom: -50px;
+        right: 0;
+        margin-top: 12px;
+    }
+
+    .principeText {
+        font-size: 18px;
+    }
+
+    .principeTextImage {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .cote {
+        width: 40%;
+    }
+    .Cadre {
+        padding: 16px;
+    }
+
+    .tree {
+        width : 50px ;
+    }
+
+    .element {
+        min-height: 250px;
+        height : auto;
+        font-size: 18px;
+    }
 }

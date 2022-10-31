@@ -1543,3 +1543,32 @@ img, svg {
     height: 100px;
     border-radius: 16px;
 }
+
+.principeImage {
+    position: absolute;
+    bottom: -50px;
+    right: -30px;
+    margin-top: 12px;
+}
+
+.principeTextImage {
+    width: 70%;
+}
+
+.principeText {
+    width: 100%;
+}
+.cote {
+    position : relative ;
+    width: 350px;
+}
+
+.Cadre {
+    padding: 24;
+}
+
+.tree {
+    width : 120px ;
+    display : flex;
+    justify-content: center;
+}

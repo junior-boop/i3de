@@ -6,7 +6,7 @@ export default function Objectifs() {
         <section style={{padding : '64px 0'}} >
             <div className="vide"/>
             <Container cName="d-flex justify-content-center">
-                <div className=" col-12 col-md-9 row">
+                <div className=" col-12 col-md-9 row p-0">
                     <div className="col-12 col-md-6 col-lg-6">
                         <h2 style={{marginBottom : 18}}>Les Objectifs </h2>
                         <div>
@@ -17,7 +17,7 @@ export default function Objectifs() {
                             </ul>
                         </div>
                     </div>
-                    <div className ="col-12 col-md-6 col-lg-6">
+                    <div className ="col-12 col-md-6 col-lg-6 p-0">
                         <div style={{width : '350px', height : 500, position : 'relative' }}>
                             <Image src={"/assets/images/cameroon.svg"} layout = {'fill'} style ={{boxShadow : '-4px -4px 50px -20px orange'}} />
                             <Point x = {44} y= {384} duree = {1} ville = "Douala" list={["Lycée Technique d'Akwa", "Lycée Technique de KOUMASSI"]} />

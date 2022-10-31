@@ -10,7 +10,7 @@ export default function Principal(){
         <h1 className='w-100 text-center mt-5'>
             Les 04 Piliers
         </h1>
-        <section className={Style.container} style={{display : 'flex', alignItem : 'center', gap : 16, flexWrap : 'wrap', padding : '64px 0'}}>
+        <section className={Style.container} style={{display : 'flex', alignItem : 'center', gap : 16, flexWrap : 'wrap', paddingTop : '64px', paddingBottom : 64}}>
             <Element className={'rand-1 rand-4-phone bg-clair element'} 
             title = {'Contribution Écologique'} 
             texte = {"Réduction de l'empreinte carbone via la réutilisation (recyclage à moyen terme) ds déchets plastiques pour améliorer l'approvisionnement en filament pour les impression"}
@@ -40,13 +40,13 @@ function Element({style, className, title, texte, hasImage, imageSrc}){
     return(
         <div className={className} style={{ padding : 36, borderRadius : 16,...style }}>
             <div className = 'h4 color-orange-rouge' style={{textTransform : "uppercase", marginBottom : 12}}>{title}</div>
-            <div style={{ width : hasImage ? '70%' : '100%'}}>{texte}</div>
+            <div className= { hasImage ? 'principeTextImage' : 'principeText'} >{texte}</div>
             {
-                hasImage ? (<div style = {{ position : 'absolute', bottom : '-50px', right : -30 }}>
+                hasImage ? (<div className= 'principeImage' >
                     <Image
-                width = {320} height = {250} 
-                src = {imageSrc}
-             />
+                        width = {320} height = {250} 
+                        src = {imageSrc}
+                    />
                 </div>) : null
             }
         </div>
