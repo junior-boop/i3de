@@ -27,7 +27,7 @@ export default function NavBar(){
         if(typeof window !== 'undefined'){
             if(window.location.pathname !== '/dons'){
                 return (
-                    <Link href={'/dons'}>
+                    <Link  href={'/dons'}>
                         <button>Faites un don</button>
                     </Link>
                 )

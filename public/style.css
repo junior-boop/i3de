@@ -432,9 +432,7 @@ header p {
     padding-left: 24px;
 }
 
-.zaa li {
-    list-style-image: url(../../assets/icones/Ellipse.png);
-}
+
 
 .zaa li+li {
     margin-top: 12px;

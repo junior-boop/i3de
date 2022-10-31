@@ -166,8 +166,11 @@ export function Viewer({onClick, open, data, imageId }){
 }
 
 function Gallerie({data, id}){
+
+    const imageLength = () => data.length <= 10 ? '00' : data.length
+
     return (
-        <Link href={'/ressource/:id'} onClick = {() => console.log('je fonctionne')}>
+        <a href={`/ressource/${id}`} onClick = {() => console.log('je fonctionne')}>
             <div className="gallerie row">
                 <div className="images col-12 col-md-5">
                     <ImageGallerie />
@@ -175,11 +178,11 @@ function Gallerie({data, id}){
                 <div className="desc col-12 col-md-7 pt-4 pl-md-4">
                     <div className="p" style={{opacity : 0.6}}>La periode de publication</div>
                     <div className="h3">Le titre de l'album</div>
-                    <div className="h4">nombre total d'image  : {data.length <= 10 ? `0${data.length}` : data.length}</div>
+                    <div className="h4">nombre total d'image  : {imageLength()}</div>
                 </div>
                 
             </div>
-        </Link>
+        </a>
     )
 }
 
