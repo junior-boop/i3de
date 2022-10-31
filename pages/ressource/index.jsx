@@ -178,7 +178,7 @@ function Gallerie({data, id}){
                 <div className="desc col-12 col-md-7 pt-4 pl-md-4">
                     <div className="p" style={{opacity : 0.6}}>La periode de publication</div>
                     <div className="h3">Le titre de l'album</div>
-                    <div className="h4">nombre total d'image  : {imageLength()}</div>
+                    {/* <div className="h4">nombre total d'image  : {imageLength()}</div> */}
                 </div>
                 
             </div>
