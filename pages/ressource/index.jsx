@@ -176,9 +176,9 @@ function Gallerie({data, id}){
                     <ImageGallerie />
                 </div>
                 <div className="desc col-12 col-md-7 pt-4 pl-md-4">
-                    <div className="p" style={{opacity : 0.6}}>La periode de publication</div>
-                    <div className="h3">Le titre de l'album</div>
-                    {/* <div className="h4">nombre total d'image  : {imageLength()}</div> */}
+                    <p style={{opacity : 0.6}}>La periode de publication</p>
+                    {/* <h3>Le titre de l'album</h3>
+                    <h4>nombre total d'image  : </h4> */}
                 </div>
                 
             </div>
