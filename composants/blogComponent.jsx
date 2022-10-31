@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import Style from '../styles/style-e.module.css'
 
@@ -5,21 +6,23 @@ export function BlogNew({ titre, publier, id }) {
   const newTitre = titre.length > 50 ? `${titre.slice(0, 49)}...` : titre;
 
   return (
-    <div className={Style.blogNew}>
-      <div
-        className={Style.blogImgTop}
-        style={{
-          backgroundImage:
-            'url("https://sellam.cm/image/cache/catalog/MAM/TV%20Stand/MAM%20(20)-228x228.jpg")',
-        }}
-      >
-        <div className={Style.nouveaute}>Nouveauté</div>
+    <Link href={`/actualites/${id}`} >
+      <div className={Style.blogNew}>
+        <div
+          className={Style.blogImgTop}
+          style={{
+            backgroundImage:
+              'url("https://sellam.cm/image/cache/catalog/MAM/TV%20Stand/MAM%20(20)-228x228.jpg")',
+          }}
+        >
+          <div className={Style.nouveaute}>Nouveauté</div>
+        </div>
+        <div className={Style.descBlog}>
+          <div className={Style.titre}>{newTitre}</div>
+          <div className={Style.publication}>Publier le : {publier}</div>
+        </div>
       </div>
-      <div className={Style.descBlog}>
-        <div className={Style.titre}>{newTitre}</div>
-        <div className={Style.publication}>Publier le : {publier}</div>
-      </div>
-    </div>
+    </Link>
   );
 }
 

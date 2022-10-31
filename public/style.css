@@ -1572,3 +1572,12 @@ img, svg {
     display : flex;
     justify-content: center;
 }
+
+.sidebar {
+    padding: 24px;
+    background-color: #f3f3f3;
+}
+
+.sidebar .sidebar-box {
+    padding-bottom: 24px;
+}
