@@ -31,7 +31,7 @@ export function BlogNewSection() {
       <div className={Style.contentGrid}>
         <div className={Style.grid_left} style={{ gap: 24 }}>
           {Data.map((el) => (
-            <BlogNew key={el.id} titre={el.titre} publier={el.publier} />
+            <BlogNew key={el.id} titre={el.titre} publier={el.publier} id ={el.id} />
           ))}
         </div>
       </div>
@@ -48,6 +48,7 @@ export function BlogPlus() {
               key={el.id}
               titre={el.titre}
               publier={el.publier}
+              id = { el.id}
             />
           ))}
         </div>
@@ -59,7 +60,7 @@ export function BlogPlus() {
 export function BlogAlaUneSpace() {
   return (
     <div>
-      <BlogAlaUne />
+      <BlogAlaUne id={655733765} />
     </div>
   );
 }
