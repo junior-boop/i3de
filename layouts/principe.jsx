@@ -1,5 +1,6 @@
 import Container from "../composants/container";
 import Image from 'next/image'
+import Style from '../styles/style-e.module.css'
 
 export default function Principal(){
     return(
@@ -9,7 +10,7 @@ export default function Principal(){
         <h1 className='w-100 text-center mt-5'>
             Les 04 Piliers
         </h1>
-        <Container cName="py-5" style={{display : 'flex', alignItem : 'center', gap : 16, flexWrap : 'wrap'}}>
+        <section className={Style.container} style={{display : 'flex', alignItem : 'center', gap : 16, flexWrap : 'wrap', padding : '64px 0'}}>
             <Element className={'rand-1 rand-4-phone bg-clair element'} 
             title = {'Contribution Écologique'} 
             texte = {"Réduction de l'empreinte carbone via la réutilisation (recyclage à moyen terme) ds déchets plastiques pour améliorer l'approvisionnement en filament pour les impression"}
@@ -30,7 +31,7 @@ export default function Principal(){
                 title = {"Durabilité des kits éducatifs"}
                 texte = {"Pour éviter l'usages de filament les objets 3D n'ont qu'une durée de vie de 5ans \n \n <b>Mutualisation des ressources :</b> \n Creation d'une banque de Modèle 3D + fiches pédagogiques les plus optimales. un reseau de partage sera disponible en ligne et mettra à la disposition  de tous les enseignants (Cameroun, Afrique, Monde) les ressources plus utiles et appréciés  "}
             />
-        </Container>
+        </section>
         </>
     )
 } 

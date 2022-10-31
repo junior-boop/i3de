@@ -2,6 +2,7 @@ import Image from "next/image";
 import Container from "../composants/container";
 import { motion, useScroll } from 'framer-motion'
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 
 export default function NavBar(){
@@ -22,6 +23,22 @@ export default function NavBar(){
     const handleVisibility = () => setVisible(!visible)
     
 
+    const DonVisible = () => {
+        if(typeof window !== 'undefined'){
+            if(window.location.pathname !== '/dons'){
+                return (
+                    <Link href={'/dons'}>
+                        <button>Faites un don</button>
+                    </Link>
+                )
+            } else {
+                return null
+            }
+        }
+    }
+
+    
+
     
     return(
         <nav style =  {{ position : scroll}}>
@@ -33,7 +50,9 @@ export default function NavBar(){
                     </div>
                 </div>
                 <div className="icon-right d-flex">
-                    <button>Faites un don</button>
+                    {
+                        DonVisible()
+                    }
                     <motion.div className="menu"
                         whileTap={{scale : 0.9}}
                         transition = {{ type : 'spring', stiffness : 200, damping : 6 }}

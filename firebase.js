@@ -2,7 +2,7 @@
 import firebase, { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import 'firebase/auth';
-import 'firebase/firestore';
+import {getFirestore} from 'firebase/firestore';
 import 'firebase/storage';
 import 'firebase/performance';
 
@@ -18,13 +18,14 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
+const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app)
 
 
 export default function InitFireBase(){
    if(typeof window !== 'undefined'){
-        const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         console.log('firebase is working well')
    }
-   
 }

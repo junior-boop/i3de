@@ -167,7 +167,7 @@ export function Viewer({onClick, open, data, imageId }){
 
 function Gallerie({data, id}){
     return (
-        <Link href={`/ressource/${id}`} onClick = {() => console.log('je fonctionne')}>
+        <Link href={'/ressource/:id'} onClick = {() => console.log('je fonctionne')}>
             <div className="gallerie row">
                 <div className="images col-12 col-md-5">
                     <ImageGallerie />

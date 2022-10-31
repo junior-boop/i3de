@@ -31,9 +31,6 @@ export default function Home() {
       <VideoPresentation />
       <Testimony /> 
       <Container>
-        <footer className={styles.footer}>
-          
-        </footer>
       </Container>
     </>
   )
