@@ -91,8 +91,8 @@ const LittleItem = () => {
         <div className='row m-0 mb-3'>
             <div style={{ width : 75, aspectRatio : '1', backgroundImage : `url('https://media.gqmagazine.fr/photos/62d924d13a5500ded9072a6d/16:9/w_2560%2Cc_limit/GettyImages-1029518538.jpg')`, borderRadius : 7, backgroundPosition : 'center', backgroundRepeat : 'no-repeat', backgroundSize : 'cover' }}></div>
             <div style={{ paddingLeft : 12, position : 'relative',  width : '75%' }}>
-                <div style={{ fontSize : 16, fontWeight : '600'}}>Le titre de l'article, un article que je vais chercher apres</div>
-            <div style={{position : 'absolute', bottom : 7}}> publier le : 11 / 12 /2022</div>
+                <div style={{ fontSize : 16, fontWeight : '600'}}>Le titre de l article, un article que je vais chercher apres</div>
+                <div style={{position : 'absolute', bottom : 7}}> publier le : 11 / 12 /2022</div>
             </div>
         </div>
     )
