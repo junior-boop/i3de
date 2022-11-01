@@ -1,9 +1,23 @@
+import { transform } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import Style from '../styles/style-e.module.css'
 
 export default function Contact() {
     return (
-        <div className={Style.container}>
-            <div className="container">
+        <div className={Style.container} style = {{marginBottom : 64}}>
+            <div className='row '>
+                <div className='col-12 col-md-6 d-none d-md-block'>
+                </div>
+                <div className='col-12 col-md-6 d-md-block'>
+                    <FaqItem />
+                    <FaqItem />
+                    <FaqItem />
+                    <FaqItem />
+                </div>
+
+
+            </div>
+            <div>
                 <div className="row">
                     <div className="col-12" data-aos="fade-up" data-aos-delay="0">
 
@@ -69,5 +83,62 @@ export default function Contact() {
             </div>
 
         </div>
+    )
+}
+
+ export function FaqItem(){
+     const ref = useRef()
+     const questionHeight = useRef()
+     
+    const [height, setHeight] = useState(0)
+    const [open, setOpen] = useState(false)
+    
+
+    useEffect(() => {
+        if(typeof window !== 'undefined'){
+            if(!open){
+                setHeight(questionHeight.current.offsetHeight)
+            } else {
+                setHeight(ref.current.offsetHeight + questionHeight.current.offsetHeight)
+            }
+        }
+    }, [ref, questionHeight, open])
+
+    const changeColor = () => {
+        if(!open){
+            return "#fff"
+        } else {
+            return '#FFEFE7'
+        }
+    }
+
+    const changeFontWieght = () => {
+        if(!open){
+            return { fontWeight : '600' }
+        } else {
+            return { fontWeight : '700', fontSize : 18 }
+        }
+    }
+
+    const rotation = () => {
+        if(!open){
+            return 'rotateZ(180deg) translateY(-5px)'
+        } else {
+            return  'rotateZ(0deg) translateY(-5px)'
+        }
+    }
+
+    return(
+        <>
+            <div className={Style.faqItem} style = {{height : height, overflow : 'hidden', backgroundColor : changeColor()}} onClick = {() => setOpen(!open)}>
+                <div ref={questionHeight} className={Style.question}>
+                    <div style = {changeFontWieght()}>Comment allons nous rendre possible la transition energetique entre les pays du nord et ceux du sud ? </div>
+                    <span style={ {transform : rotation()} }>
+                        <img src='./icon_little.png' width={'100%'} alt = 'fleche vers le haut'/>
+                    </span>
+                </div>
+                <div ref={ref} className={Style.response}>response  Earlier this year Wroclaw and Sharjah (both former UNESCO World Book Capitals) announced in Poland that a new fund is being set up to generate financial support for writers, translators, and others in the Ukrainian publishing industry who have lost their livelihoods. And, more recently, in September they extended the support to publish children’s books in Ukrainian for refugees who have fled to Poland. The rights to several titles have been bought authors/illustrators/publishers and printed in the original language and distributed in Poland. Working with are libraries, schools, community centres and various NGOs working with refugees, more than 50,000 refugee children are expected to have access to these titles.</div>
+            </div>
+        </>
     )
 }

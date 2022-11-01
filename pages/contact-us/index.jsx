@@ -1,5 +1,10 @@
 import Contact from "../../composants/contact";
 
 export default function Contacte() {
-    return <Contact />
+    return (
+        <>  
+            <div className="vide"></div>
+            <Contact />
+        </>
+    )
 }
