@@ -14,7 +14,9 @@ export default function Blog() {
                         <div className= 'col-12 p-0 mb-4'>
                             <img src={'/assets/images/diapo-2.jpg'} width = {"100%"} alt = 'diapo' />
                         </div>
-                        <p className="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                        <p style={{color : '#888', fontWeight : '500', marginBottom : 12}}>Publier le : 11 decembre 2022</p>
+                        
+                        <p style={{color : 'black', fontWeight : '600', marginBottom : 12, fontSize : 18}}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 
                         <blockquote><p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p></blockquote>
@@ -65,8 +67,33 @@ export default function Blog() {
                             <h3 className="text-black">Paragraph</h3>
                             <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
                         </div>
+                        
+
+                        <div className="sidebar-box">
+                            <div className="categories">
+                                <h3>Publications Similaires</h3>
+                                <LittleItem />
+                                <LittleItem />
+                                <LittleItem />
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+    )
+}
+
+
+const LittleItem = () => {
+
+    return (
+        <div className='row m-0 mb-3'>
+            <div style={{ width : 75, aspectRatio : '1', backgroundImage : `url('https://media.gqmagazine.fr/photos/62d924d13a5500ded9072a6d/16:9/w_2560%2Cc_limit/GettyImages-1029518538.jpg')`, borderRadius : 7, backgroundPosition : 'center', backgroundRepeat : 'no-repeat', backgroundSize : 'cover' }}></div>
+            <div style={{ paddingLeft : 12, position : 'relative',  width : '75%' }}>
+                <div style={{ fontSize : 16, fontWeight : '600'}}>Le titre de l'article, un article que je vais chercher apres</div>
+            <div style={{position : 'absolute', bottom : 7}}> publier le : 11 / 12 /2022</div>
+            </div>
+        </div>
     )
 }
